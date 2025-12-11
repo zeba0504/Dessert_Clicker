@@ -254,9 +254,16 @@ private fun DessertClicker(
                 }
             )
         }
-    )
+    ) { contentPadding ->
+        DessertClickerScreen(
+            revenue = uiState.revenue,
+            dessertsSold = uiState.dessertsSold,
+            dessertImageId = uiState.currentDessertImageId,
+            onDessertClicked = onDessertClicked,
+            modifier = Modifier.padding(contentPadding)
+        )
     }
-
+}
 
 
 @Composable
