@@ -11,4 +11,8 @@ class DessertViewModel : ViewModel(){
     private val _dessertUiState = MutableStateFlow(DessertUiState())
     val dessertUiState: StateFlow<DessertUiState> = _dessertUiState.asStateFlow()
 
+
+    fun onDessertClicked(){
+
+    }
 }
