@@ -241,8 +241,21 @@ private fun DessertClicker(
     uiState: DessertUiState,
     onDessertClicked: () -> Unit
 ) {
-
-}
+    Scaffold(
+        topBar = {
+            val intentContext = LocalContext.current
+            DessertClickerAppBar(
+                onShareButtonClicked = {
+                    shareSoldDessertsInformation(
+                        intentContext = intentContext,
+                        dessertsSold = uiState.dessertsSold,
+                        revenue = uiState.revenue
+                    )
+                }
+            )
+        }
+    )
+    }
 
 
 
