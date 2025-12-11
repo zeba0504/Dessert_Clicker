@@ -72,6 +72,7 @@ import com.example.dessertclicker.model.Dessert
 import com.example.dessertclicker.ui.theme.DessertClickerTheme
 import android.util.Log
 import androidx.compose.runtime.saveable.rememberSaveable
+import com.example.dessertclicker.data.DessertUiState
 
 private const val TAG = "MainActivity"
 class MainActivity : ComponentActivity() {
@@ -234,6 +235,16 @@ private fun DessertClickerApp(
         )
     }
 }
+
+@Composable
+private fun DessertClicker(
+    uiState: DessertUiState,
+    onDessertClicked: () -> Unit
+) {
+
+}
+
+
 
 @Composable
 private fun DessertClickerAppBar(
